@@ -3,9 +3,10 @@ import UrgentCard from "../Card/urgentCard";
 
 export default async function UrgentPosts() {
   const blog = await getBlogPosts();
+  const urgents = posts.slice(0, 3);
   return (
     <div className="grid grid-cols-3 pt-8">
-      {posts.map((post) => (
+      {urgents.map((post) => (
         <UrgentCard post={post} key={post.id} />
       ))}
     </div>

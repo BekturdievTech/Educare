@@ -80,31 +80,109 @@ export const posts = [
     id: "1",
     category: "almashinuv-dasturlari",
     title:
-      "Belgiyada magistratura bosqichini toʻliq moliyalashtirilgan holda oʻqish uchun Master Mind Scholarship granti",
+      "1 Maktab bosqichini toʻliq moliyalashtirilgan holda oʻqish uchun Master Mind Scholarship granti",
     muddat: "13th Apr 2024",
     location: "Belgiya",
     mukofot: "To'liq Moliyalashtirilgan",
     featuredImageLink: "/belgiya.jpg",
+    level: "Maktab",
+    soha: "Amaliy Fanlar"
   },
   {
     id: "2",
     category: "almashinuv-dasturlari",
     title:
-      "Belgiyada magistratura bosqichini toʻliq moliyalashtirilgan holda oʻqish uchun Master Mind Scholarship granti",
+      "2 Bakalavr bosqichini toʻliq moliyalashtirilgan holda oʻqish uchun Master Mind Scholarship granti",
     muddat: "13th Apr 2024",
     location: "Belgiya",
     mukofot: "To'liq Moliyalashtirilgan",
     featuredImageLink: "/belgiya.jpg",
+    level: "Bakalavr",
+    soha: "Kompyuter fanlari va IT"
   },
   {
     id: "3",
     category: "almashinuv-dasturlari",
     title:
-      "Belgiyada magistratura bosqichini toʻliq moliyalashtirilgan holda oʻqish uchun Master Mind Scholarship granti",
+      "3 Belgiyada magistratura bosqichini toʻliq moliyalashtirilgan holda oʻqish uchun Master Mind Scholarship granti",
     muddat: "13th Apr 2024",
     location: "Belgiya",
     mukofot: "To'liq Moliyalashtirilgan",
     featuredImageLink: "/belgiya.jpg",
+    level: "Magistr",
+    soha: "Biznes boshqaruv"
+  },
+  {
+    id: "4",
+    category: "almashinuv-dasturlari",
+    title:
+      "4 Maktab bosqichini toʻliq moliyalashtirilgan holda oʻqish uchun Master Mind Scholarship granti",
+    muddat: "13th Apr 2024",
+    location: "Belgiya",
+    mukofot: "To'liq Moliyalashtirilgan",
+    featuredImageLink: "/belgiya.jpg",
+    level: "Maktab",
+    soha: "Amaliy Fanlar"
+  },
+  {
+    id: "5",
+    category: "almashinuv-dasturlari",
+    title:
+      "5 Bakalavr bosqichini toʻliq moliyalashtirilgan holda oʻqish uchun Master Mind Scholarship granti",
+    muddat: "13th Apr 2024",
+    location: "Belgiya",
+    mukofot: "To'liq Moliyalashtirilgan",
+    featuredImageLink: "/belgiya.jpg",
+    level: "Bakalavr",
+    soha: "Kompyuter fanlari va IT"
+  },
+  {
+    id: "6",
+    category: "almashinuv-dasturlari",
+    title:
+      "6 Belgiyada magistratura Ijtimoiy fanlar bosqichini toʻliq moliyalashtirilgan holda oʻqish uchun Master Mind Scholarship granti",
+    muddat: "13th Apr 2024",
+    location: "Belgiya",
+    mukofot: "To'liq Moliyalashtirilgan",
+    featuredImageLink: "/belgiya.jpg",
+    level: "Magistr",
+    soha: "Ijtimoiy fanlar"
+  },
+  {
+    id: "7",
+    category: "almashinuv-dasturlari",
+    title:
+      "7 Maktab bosqichini Ijtimoiy fanlar toʻliq moliyalashtirilgan holda oʻqish uchun Master Mind Scholarship granti",
+    muddat: "13th Apr 2024",
+    location: "Belgiya",
+    mukofot: "To'liq Moliyalashtirilgan",
+    featuredImageLink: "/belgiya.jpg",
+    level: "Maktab",
+    soha: "Ijtimoiy fanlar"
+  },
+  {
+    id: "8",
+    category: "almashinuv-dasturlari",
+    title:
+      "8 Bakalavr bosqichini toʻliq moliyalashtirilgan holda oʻqish uchun Master Mind Scholarship granti",
+    muddat: "13th Apr 2024",
+    location: "Belgiya",
+    mukofot: "To'liq Moliyalashtirilgan",
+    featuredImageLink: "/belgiya.jpg",
+    level: "Bakalavr",
+    soha: "Gumanitar fanlar"
+  },
+  {
+    id: "9",
+    category: "almashinuv-dasturlari",
+    title:
+      "9 Belgiyada magistratura bosqichini toʻliq moliyalashtirilgan holda oʻqish uchun Master Mind Scholarship granti",
+    muddat: "13th Apr 2024",
+    location: "Belgiya",
+    mukofot: "To'liq Moliyalashtirilgan",
+    featuredImageLink: "/belgiya.jpg",
+    level: "Magistr",
+    soha: "Muhandislik va texnologiya"
   },
 ];
 
@@ -112,7 +190,6 @@ export const levels = [
   "Maktab",
   "Bakalavr",
   "Magistr",
-  "Phd Daktarantura",
 ];
 
 export const faculties = [

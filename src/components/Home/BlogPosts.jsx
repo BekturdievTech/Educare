@@ -3,9 +3,10 @@ import { posts } from "@/data/constants";
 
 export default async function BlogPosts() {
   const blog = await getBlogPosts();  
+  const blogposts = posts.slice(0, 3);
   return (
     <div className="mt-10 flex gap-8">
-      {posts.map((post) => (
+      {blogposts.map((post) => (
         <BlogCard post={post} key={post.id} />
       ))}
     </div>

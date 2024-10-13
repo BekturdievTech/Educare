@@ -3,16 +3,15 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-export default function Pagination({ parameters }) {
+export default function Pagination({ parameters, dataLength }) {
   const pathname = usePathname();
   const { soha, bosqich, page } = parameters;
 
   let pageParam = parseInt(page, 10);
   pageParam = !pageParam || pageParam < 1 ? 1 : pageParam;
-  const perPage = 6;
-  const data = 20;
+  const perPage = 4;
 
-  const totalPages = Math.ceil(data / perPage);
+  const totalPages = Math.ceil(dataLength / perPage);
 
   const prevPage = pageParam - 1 > 0 ? pageParam - 1 : 1;
   const nextPage = pageParam + 1;

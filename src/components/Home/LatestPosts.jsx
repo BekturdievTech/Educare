@@ -3,9 +3,10 @@ import { posts } from "@/data/constants";
 
 export default async function LatestPosts() {
   const blog = await getBlogPosts();
+  const latestPosts = posts.slice(0, 3);
   return (
     <div className="mt-10 flex flex-col gap-8">
-      {posts.map((post) => (
+      {latestPosts.map((post) => (
         <PostCard post={post} key={post.id} />
       ))}
     </div>
