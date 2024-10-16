@@ -1,12 +1,12 @@
 "use client";
 import { useState } from "react";
-import { faculties } from "@/data/constants";
+import { facultyOptions } from "@/data/constants";
 import Link from "next/link";
 
 export default function FacultySelect({ parameters, pathname }) {
-  const { bosqich, soha, page } = parameters;
+  const { level, faculty, category } = parameters;
   // -------------------- primary hooks -----------------------------------
-  const [selectedOption, setSelectedOption] = useState( soha ? soha : "Barchasi");
+  const [selectedOption, setSelectedOption] = useState( faculty ? faculty : "Barchasi");
   const [isOpen, setIsOpen] = useState(false);
   // --------------- function to update the state and colse the options list --------------------
   const hadnleSelect = (option) => {
@@ -46,7 +46,8 @@ export default function FacultySelect({ parameters, pathname }) {
                 href={{
                   pathname: pathname,
                   query: {
-                    ...(bosqich ? { bosqich } : {}),                                        
+                    ...(category ? {category} : {}),                                        
+                    ...(level ? { level } : {}),
                   },
                 }}                
                 onClick={() => {hadnleSelect("Barchasi")}}
@@ -54,13 +55,14 @@ export default function FacultySelect({ parameters, pathname }) {
               >
                 Barchasi
               </Link>
-            {faculties.map((option) => (
+            {facultyOptions.map((option) => (
               <Link
                 href={{
                   pathname: pathname,
                   query: {
-                    ...(bosqich ? { bosqich } : {}),
-                    soha: option,                    
+                    ...(category ? {category} : {}),
+                    ...(level ? { level } : {}),
+                    faculty: option,                    
                   },
                 }}
                 key={option}

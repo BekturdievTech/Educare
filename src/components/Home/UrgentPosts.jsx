@@ -1,4 +1,4 @@
-import { posts } from "@/data/constants";
+import { posts } from "@/data/postsdata";
 import UrgentCard from "../Card/urgentCard";
 
 export default async function UrgentPosts() {

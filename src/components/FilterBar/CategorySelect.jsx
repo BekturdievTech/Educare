@@ -1,12 +1,12 @@
 "use client";
 import { useState } from "react";
-import { levelOptions } from "@/data/constants";
+import { categoryOptions } from "@/data/constants";
 import Link from "next/link";
 
-export default function levelOptionselect({ parameters, pathname }) {
+export default function CategorySelect({ parameters, pathname }) {
   const { level, faculty, category } = parameters;
 
-  const [selectedOption, setSelectedOption] = useState(level ? level : "Barchasi");
+  const [selectedOption, setSelectedOption] = useState(category ? category : "Barchasi");
   const [isOpen, setIsOpen] = useState(false);
 
   const hadnleSelect = (option) => {    
@@ -21,7 +21,7 @@ export default function levelOptionselect({ parameters, pathname }) {
   return (
     <div className="relative w-full h-[60px]">
       <div
-        className={`px-[18px] pt-6 pb-2 w-full h-full text-lg outline-none transition-all duration-300 ease-in-out cursor-pointer border border-solid ${
+        className={`px-[18px] pt-6 pb-2 w-full h-full text-lg outline-none transition-all duration-300 ease-in-out cursor-pointer rounded-l-xl border border-solid ${
           isOpen
             ? "border-primary bg-white"
             : "border-transparent bg-[#f5f5f5] hover:border-neutral-grey-light"
@@ -29,7 +29,7 @@ export default function levelOptionselect({ parameters, pathname }) {
         onClick={toggleDropdown}
       >
         <span className="absolute top-2 left-5 text-sm text-neutral-grey">
-          Bosqich
+          Kategoriya
         </span>
         {selectedOption}
       </div>
@@ -46,8 +46,8 @@ export default function levelOptionselect({ parameters, pathname }) {
                 href={{
                   pathname: pathname,
                   query: {                    
-                    ...(category ? {category} : {}),                 
-                    ...(faculty ? {faculty} : {}),    
+                    ...(level ? {level} : {}),
+                    ...(faculty ? {faculty} : {})                     
                   }
                 }}                           
                 onClick={() => hadnleSelect("Barchasi")}
@@ -55,14 +55,14 @@ export default function levelOptionselect({ parameters, pathname }) {
               >
                 Barchasi
               </Link>
-            {levelOptions.map((option, index) => (
+            {categoryOptions.map((option, index) => (
               <Link
                 href={{
                   pathname: pathname,
                   query: {
-                    ...(category ? {category} : {}),                    
-                    level: option,
-                    ...(faculty ? {faculty} : {}),
+                    category: option,
+                    ...(level ? {level} : {}),
+                    ...(faculty ? {faculty} : {})                     
                   }
                 }}
                 key={index}                
@@ -78,3 +78,4 @@ export default function levelOptionselect({ parameters, pathname }) {
     </div>
   );
 }
+

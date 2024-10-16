@@ -1,5 +1,5 @@
 import PostCard from "../Card/postCard";
-import { posts } from "@/data/constants";
+import { posts } from "@/data/postsdata";
 
 export default async function LatestPosts() {
   const blog = await getBlogPosts();

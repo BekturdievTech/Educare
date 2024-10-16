@@ -2,7 +2,7 @@ import Skeleton from "./skeleton";
 export default function BlogPostLoading({ number }) {
   const listItems = Array.from({ length: number }, (_, index) => index + 1);
   return (
-    <div className="mt-10 flex gap-8">
+    <div className="mt-10 flex justify-between flex-wrap gap-y-8">
       {listItems.map((item, index) => (
         <div className="blog-card" key={index}>
           <div className="imgBox bg-gray-300 motion-safe:animate-pulse">

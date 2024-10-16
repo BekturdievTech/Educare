@@ -12,9 +12,9 @@ export default function PostCard({post}) {
     };
 
   return (
-    <Link href={`${category}/${id}`}>
+    <Link href={`imkoniyatlar/${title}`}>
       <div
-        className="w-full p-4 border rounded-3xl flex justify-between border-[#eeeeee] items-center gap-8 hover:border-[#FFD452] post-card transition duration-300 ease-in-out font-outfit"        
+        className="w-full p-4 border rounded-3xl flex border-[#eeeeee] items-center gap-8 hover:border-[#FFD452] post-card transition duration-300 ease-in-out font-outfit"        
       >
         <div className="min-w-[324px] h-[198px] relative">
           <Image

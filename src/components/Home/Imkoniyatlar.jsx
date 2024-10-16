@@ -17,7 +17,7 @@ export default function Imkoniyatlar() {
       </div>
       <div className="imkoniyatlar-grid pt-20">
         {Opportunities.map((item, index) => (
-          <Link href={item.link} key={index}>
+          <Link href={`imkoniyatlar${item.link}`} key={index}>
             <div className="flex flex-col justify-center items-center gap-2">
               <div
                 className="rounded-2xl w-16 h-16 flex justify-center items-center"

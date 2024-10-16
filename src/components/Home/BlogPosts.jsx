@@ -1,5 +1,5 @@
 import BlogCard from "../Card/blogCard";
-import { posts } from "@/data/constants";
+import { posts } from "@/data/postsdata";
 
 export default async function BlogPosts() {
   const blog = await getBlogPosts();  
