@@ -5,9 +5,9 @@ export default async function UrgentPosts() {
   const blog = await getBlogPosts();
   const urgents = posts.slice(0, 3);
   return (
-    <div className="grid grid-cols-3 pt-8">
+    <div className="flex items-center pt-8 justify-between">
       {urgents.map((post) => (
-        <UrgentCard post={post} key={post.id} />
+        <UrgentCard post={post} key={post.id} />        
       ))}
     </div>
   );

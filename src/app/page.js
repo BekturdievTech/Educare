@@ -6,6 +6,7 @@ import UrgentPosts from "@/components/Home/UrgentPosts"
 import BlogPostLoading from "@/components/Loadings/BlogPost.loading"
 import LatestPostLoading from "@/components/Loadings/PostContent.loading"
 import UrgentPostLoading from "@/components/Loadings/UrgentPost.loading"
+import TitleBtn from "@/components/TitleBtn"
 import { Suspense } from "react"
 
 export default function Home() {
@@ -18,11 +19,12 @@ export default function Home() {
           <Imkoniyatlar />
           {/*  */}
           <div className="py-24">
+            <TitleBtn title="Events" />
             <h2 className="text-5xl font-bold">Upcoming Education Events</h2>
             <div className="flex justify-between w-full items-end">
-              <p className="font-outfit w-3/5">
-                Are you eager to expand your knowledge, gain new skills, and connect with like-minded individuals? Look no further! We're thrilled to announce a series of upcoming
-                educational events that promise to be both informative and engaging.
+              <p className="font-outfit w-3/5 pt-3">
+                Choose from 213,000 online video courses with <br />
+                new additions published every month
               </p>
               <a href="/imkoniyatlar" className="font-medium py-3 px-4 hover:bg-primary bg-dark text-white hover:text-dark rounded-lg transition ease-in duration-300 delay-150">
                 Explore all
@@ -46,7 +48,13 @@ export default function Home() {
       {/*  */}
       <section>
         <div className="container mx-auto py-24">
-          <h2 className="text-5xl font-bold text-center">Our Latest Blog</h2>
+          <TitleBtn title="Our Blog" />
+          <div className="flex justify-between w-full items-end">
+            <h2 className="text-5xl font-bold">Upcoming Education Events</h2>
+            <a href="/blog" className="font-medium py-3 px-4 hover:bg-primary bg-dark text-white hover:text-dark rounded-lg transition ease-in duration-300 delay-150">
+              Explore all
+            </a>
+          </div>
           <Suspense fallback={<BlogPostLoading number={3} />}>
             <BlogPosts />
           </Suspense>
